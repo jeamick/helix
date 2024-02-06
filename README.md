@@ -12,7 +12,7 @@ Our goal is to provide a code base that is not only technologically advanced but
 ### Optimized Relay Flows
 
 The PBS relay operates using two distinct flows, each with its own unique key requirements:
-- **Submit_block -> Get_header Flow (Latency):** Currently, this is the only flow where latency is critically important. Our primary focus is on minimizing latency, while considering redundancy as a secondary priority. It is noteworthy that future enhancements will include hyper-optimizing the `get_header` and `get_payload` flows for latency (see the Future Work section for more details).
+- **Submit_block -> Get_header Flow (Latency):** Currently, this is the only flow where latency is critically important. Our primary focus is on minimising latency, while considering redundancy as a secondary priority. It is noteworthy that future enhancements will include hyper-optimizing the `get_header` and `get_payload` flows for latency (see the Future Work section for more details).
 - **Get_header -> Get_payload Flow (Redundancy):** Promptly delivering the payload following a `get_header` request is essential. A delay in this process risks the proposer missing their slot, making high redundancy in this flow extremely important.
 
 ### Geo-Distribution and Global Accessibility: 
